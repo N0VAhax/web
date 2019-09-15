@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>nav-item/icon/security</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="nav-item/icon/security" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconmonstr-lock-4" transform="translate(3.000000, 1.000000)">
+            <path d="M2.5,8.5625 L2.5,5.5 C2.5,2.17675997 5.42010178,-0.5 9,-0.5 C12.5798982,-0.5 15.5,2.17675997 15.5,5.5 L15.5,8.5625 L18.5,8.5625 L18.5,22.5 L-0.5,22.5 L-0.5,8.5625 L2.5,8.5625 Z" id="Path" stroke="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M7,14 C7,12.896 7.896,12 9,12 C10.104,12 11,12.896 11,14 C11,14.738 10.596,15.376 10,15.723 L10,18 L8,18 L8,15.723 C7.404,15.376 7,14.738 7,14 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <rect id="Rectangle-17" fill="#FFFFFF" x="2" y="8" width="14" height="1"></rect>
+        </g>
+    </g>
+</svg>

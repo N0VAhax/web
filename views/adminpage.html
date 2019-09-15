@@ -1,0 +1,16 @@
+{{##def.page_title = 'Admin Page' #}}
+
+{{##def.content:
+<div class="row faq panel radius">
+    <h5>Admin Page</h5>
+    <hr>
+    <div class="row">
+        <button id="pauseGame">PauseGame</button>
+    </div>
+    <div class="row">
+        <button id="resumeGame">ResumeGame</button>
+    </div>
+</div>
+<script data-main="/client_old/scripts/admin" src="{{? it.buildConfig }}/old/scripts/{{=it.buildConfig['admin-old.js']}}{{??}}/client_old/scripts/lib/require.js{{?}}"></script>
+#}}
+{{#def.include('./template/main_old')}}

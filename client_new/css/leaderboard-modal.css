@@ -1,0 +1,166 @@
+.leaderboard-modal {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1b1f26;
+    border-radius: 3px;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.4);
+    width: 900px;
+    position: relative;
+    margin: auto;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.leaderboard-modal .padding {
+    padding: 38px 40px;
+}
+
+.leaderboard-modal .modal-title {
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-left: 5px;
+    line-height: 32px;
+}
+
+
+.leaderboard-modal .modal-body {
+    width: 100%;
+    margin-top: 31px;
+}
+
+.leaderboard-modal .modal-body .table-inner {
+    height: 100%;
+
+    width: 100%;
+}
+
+/* table */
+.leaderboard-modal .modal-body .table-content{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+.leaderboard-modal .modal-body .table-content th {
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-align: left;/*text-align: left;*/
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+.leaderboard-modal .modal-body .table-content tr {
+    width: 100%;
+    display: table;
+    text-align: left;/*text-align: left;*/
+    border-bottom: solid rgba(255, 255, 255, 0.05) 1px;
+}
+
+/* Adjust head columns */
+
+.leaderboard-modal .modal-body .table-content th:nth-child(1) {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+
+    text-align: center;
+    width: 6%;
+}
+
+.leaderboard-modal .modal-body .table-content th:nth-child(2) {
+    width: 20%;
+}
+
+.leaderboard-modal .modal-body .table-content th:nth-child(3) {
+    width: 20%;
+}
+
+.leaderboard-modal .modal-body .table-content th:nth-child(4) {
+    width: 20%;
+}
+
+.leaderboard-modal .modal-body .table-content th a {
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-align: left;
+    /* text-align: left; */
+    opacity: 1 !important;
+    color: 1;
+}
+
+.leaderboard-modal .modal-body .table-content td:nth-child(4):hover {
+    cursor: pointer;
+}
+
+.leaderboard-modal .modal-body .table-content th:nth-child(5) {
+    width: 20%;
+}
+
+.leaderboard-modal .modal-body .table-content th:nth-child(6) {
+    width: 15%;
+}
+
+/* Adjust body columns */
+
+.leaderboard-modal .modal-body .table-content td:nth-child(1) {
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    text-align: center;
+    line-height: 24px;
+    width: 6%;
+}
+
+
+
+.leaderboard-modal .modal-body .table-content td:nth-child(2) {
+    width: 20%;
+}
+
+.leaderboard-modal .modal-body .table-content td:nth-child(3) {
+    width: 20%;
+}
+
+.leaderboard-modal .modal-body .table-content td:nth-child(4) {
+    width: 20%;
+}
+
+.leaderboard-modal .modal-body .table-content td:nth-child(5) {
+    width: 20%;
+}
+
+.leaderboard-modal .modal-body .table-content td:nth-child(6) {
+    width: 15%;
+}
+
+.leaderboard-modal .modal-body .table-content td:nth-child(6)>input {
+    width: 60%;
+}
+
+.leaderboard-modal .modal-body .table-content td:nth-child(6)>input {
+    max-width: 40%;
+}
+
+.leaderboard-modal .modal-body .table-content thead {
+    background-color: #15181f;
+}
+
+.leaderboard-modal .modal-body .table-content tbody {
+    overflow-y: auto;
+    height: 100%;
+    bottom: 4rem;
+}
+
+.leaderboard-modal .modal-body .table-content tr td {
+    font-size: 0.7rem;
+    text-align: left;/*text-align: left;*/
+}
+
+.leaderboard-modal .modal-body .table-content tbody tr:hover {
+    color: black;
+    background: rgba(255, 129, 0 , .4);
+}
+
+.leaderboard-modal .modal-body .table-content a {
+    font-weight: 300;
+}

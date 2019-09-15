@@ -1,0 +1,681 @@
+#strategy-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#strategy-container .widget-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 8vh;
+    overflow-y: scroll;
+}
+
+#strategy-container .control-buttons {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#strategy-container .buttons-container {
+    text-align: right;
+
+}
+
+#strategy-container .strategy-invalid-data {
+    font-size: .6em;
+    color: #B81717;
+    padding-left: .6em;
+    display: block;
+    text-align: right;
+}
+
+
+/* Auto Bet widget
+   ========================================================================== */
+
+#strategy-container .stra-left-container {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-right: 4%;
+    height: 80%;
+    border-right: solid #242933 1px;
+    margin-top: 2.25vh;
+}
+
+#strategy-container .stra-right-container {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    min-width: 280px;
+    height: 80%;
+    padding-left: 2%;
+}
+
+.first-input-end {
+    margin-right: calc(100% - 270px);
+}
+
+.first-span-end {
+    margin-right: calc(100% - 260px);
+}
+
+#strategy-container .stra-base-bet {
+    /* background-color: #ffffff; */
+}
+
+#strategy-container .stra-cash-out-at {
+    /* background-color: whitesmoke; */
+}
+
+#strategy-container .stra-base-bet, #strategy-container .stra-cash-out-at, #strategy-container .stra-max-bet-stop {
+    line-height: 1.7rem;
+    margin: 1.3vh 0 1vh 0;
+}
+
+#strategy-container .stra-on-loss {
+    padding-top: .3em 0;
+}
+
+#strategy-container .stra-on-loss:first-child {
+    line-height: 1em;
+}
+
+#strategy-container .stra-on-win {
+    margin-top: 15px;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    /* background-color: #ffffff; */
+}
+
+#strategy-container .stra-on-win:first-child {
+    line-height: 1em;
+}
+
+/* Strategy Script
+   ========================================================================== */
+
+#strategy-container .strategy-input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(94, 94, 94, 0.2);
+    display: block;
+    resize: none;
+}
+
+#strategy-container .strategy-start, #strategy-container .strategy-stop, #strategy-container .strategy-select {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 0;
+    display: inline-block;
+    height: 1rem;
+    cursor: pointer;
+    outline: none;
+    float: right;
+}
+
+#strategy-container .strategy-start-stop {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 6vh;
+    text-align: center;
+    color: white;
+    background-color: #75E645;
+    position: relative;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 0;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+#strategy-container .strategy-start-stop:active {
+    -webkit-box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,.2);
+    box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,0.2);
+    position: relative;
+    top: 6px;
+}
+
+
+#strategy-container .strategy-start:disabled, #strategy-container .strategy-stop:disabled, #strategy-container .strategy-select:disabled {
+    color: grey;
+}
+
+#strategy-container .strategy-start {
+    margin-right: 0.2rem;
+}
+
+#strategy-container .strategy-stop {
+    margin-right: 0.2rem;
+}
+
+#strategy-container .strategy-select {
+    margin-right: 0.2rem;
+}
+
+#strategy-container .bet-title {
+    font-weight: 500;
+}
+
+/** ================ Default look ================ **/
+
+.stra-left-container .control-inputs-container {
+}
+
+
+.stra-left-container .input-control {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.stra-left-container .button-container {
+    height: 6vh;
+    padding: 4vh 0rem 0 0rem;
+}
+
+.stra-left-container .bet-container {
+    padding: 3.3vh 0 0 0;
+}
+
+.stra-left-container .autocash-container {
+    padding: 5vh 0rem 0 0rem;
+}
+
+.stra-left-container  .bet-container > input, .stra-left-container  .bet-container > span, .stra-left-container .autocash-container > input, .stra-left-container .autocash-container > span {
+}
+
+
+/** BET/AUTOCASH **/
+
+.stra-left-container .betamount-controls-container {
+    position: relative;
+    height: 60px;
+    padding-top: 16px; 
+    font-size: 14px;
+}
+
+.stra-left-container .betamount-controls {
+    width: 23%;
+    border-radius: 3px;
+    border: solid 1px #ffffff;
+    position: absolute;
+    text-align: center;
+    line-height: 4vh; /* 48px;*/
+    user-select: none;
+    cursor: pointer;
+}
+
+.stra-left-container .betamount-controls:active {
+    position: absolute;
+    top: 20px;
+}
+
+.stra-left-container .betamount-controls.control1 {
+    left: 0%;
+}
+
+.stra-left-container .betamount-controls.control2 {
+    left: 25%;
+}
+
+.stra-left-container .betamount-controls.control3 {
+    left: 51%;
+}
+
+.stra-left-container .betamount-controls.control4 {
+    left: 77%;
+}
+
+.stra-left-container .bet-input-group {
+    display: table;
+    position: relative;
+}
+
+.stra-left-container .bet-input-group>input {
+    height: 4.5vh;
+    width: 100%;
+    outline: none;
+    padding-left: 0.5rem;
+    margin: 0;
+}
+
+.stra-left-container .bet-input-group>input:disabled {
+	background-color: #EBEBEB;
+}
+
+.stra-left-container .bet-input-group>input, .stra-left-container .bet-input-group>span {
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
+.stra-right-container input[type=text] {
+    background-color: #14171f;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.stra-right-container .stra-max-bet-stop input[type=text] {
+    width: 86px;
+}
+
+.stra-right-container .stra-on-loss input[type=text], .stra-right-container .stra-on-win input[type=text] {
+    width: 48px;
+}
+
+.stra-right-container .stra-max-bet-stop span:last-child, 
+.stra-right-container .stra-on-loss span:last-child, 
+.stra-right-container .stra-on-win span:last-child {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    background-color: #11141a;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    padding: 1px 0.5rem 0;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 33px;
+    white-space: nowrap;
+    height: 1rem;
+}
+
+.stra-right-container {
+    font-size: 14px;
+}
+
+.stra-left-container .bet-input-group>span:first-child  {
+    position: absolute;
+    font-weight: bold;
+    top: -3.5vh;
+    border: 0;
+    background-color: transparent;
+    border-color: transparent;
+    color: #b0b3c1;
+    font-size: 14px;
+}
+
+.stra-left-container .bet-input-group>span:last-child  {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    background-color: #11141a;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    height: 1rem;
+    display: table-cell;
+}
+
+.stra-left-container .bet-input-group.error input {
+    border: 1px solid;
+    border-color: #a94442;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.stra-left-container .bet-input-group.error input:focus {
+    border-color: #843534;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+    outline: none;
+}
+
+.stra-left-container .bet-input-group.error span {
+    border: 1px solid;
+    border-color: #a94442;
+    background-color: #a94442;
+    color: white;
+}
+
+.stra-left-container .bet-input-group.error>span:first-child {
+    color: #a94442;
+    border: none;
+    background-color: transparent;
+}
+
+
+/** Button **/
+
+.stra-left-container .bet-button-container {
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.stra-left-container .bet-button {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 72px;
+    text-align: center;
+    color: white;
+    background-color: #75E645;
+    position: relative;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 2rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    /* -webkit-box-shadow: 0 6px 0 rgb(255,82,5),0px 9px 25px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 6px 0 rgb(255,82,5),0px 9px 25px rgba(0,0,0,.1);
+    box-shadow: 0px 6px 0px rgb(255,81,20),0px 9px 25px rgba(0,0,0,0.1); */
+    margin-bottom: 10px;
+    border: 0;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.stra-left-container .bet-button > span {
+     white-space: nowrap;
+}
+
+.stra-left-container .btn-content {
+    white-space: nowrap;
+}
+
+.stra-left-container .btn-content .cashout-cont {
+    display: block;
+    line-height: 2rem;
+}
+
+.stra-left-container .btn-content .cashout-amount-cont {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.stra-left-container .bet-button:active {
+    -webkit-box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,.2);
+    box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,0.2);
+    position: relative;
+    top: 6px;
+}
+
+.stra-left-container .bet-button.cashout {
+    background-color: #ff8100;
+}
+
+.stra-left-container .bet-button.disable, .stra-left-container .bet-button.invalid-bet {
+    background-color: rgba(168, 168, 168, 1);
+    -webkit-box-shadow: 0px 3px 0px rgb(186, 60, 18), 0px 3px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0px 3px 0px rgb(186, 60, 18), 0px 3px 6px rgba(0,0,0,.2);
+    box-shadow: 0px 3px 0px rgb(102, 102, 102), 0px 3px 6px rgba(0,0,0,0.2);
+    cursor: default;
+}
+
+.stra-left-container .bet-button.disable.cancel {
+    cursor: pointer;
+}
+
+.stra-left-container .bet-button a.cancel {
+    color: #880000;
+    font-size: 0.8rem;
+}
+
+
+/* Login Button */
+
+.stra-left-container .login-container {
+}
+
+.stra-left-container .login-button-container {
+    margin: 0.8rem;
+    margin-top: 2rem;
+}
+
+.stra-left-container .register-container {
+    text-align: right;
+    padding-right: 0.8rem;
+}
+
+.stra-left-container .register-container .register{
+}
+
+
+/** ================ Small Screen look ================ **/
+
+@media handheld, only screen and (max-width: 767px) {
+
+    .stra-left-container .control-inputs-container {
+        width: 70%;
+        padding: 0;
+        float: left;
+        display: block;
+    }
+
+    .stra-left-container .input-control {
+        height: initial;
+    }
+
+    .stra-left-container .button-container {
+        float: left;
+        width: 30%;
+        height: 100%;
+    
+        padding: 0 0.5rem 0 0;
+}
+
+    .stra-left-container .autocash-container {
+        padding-top: 0;
+        margin-top: 0.3rem;
+    }
+
+    /** BET/AUTOCASH **/
+
+    .stra-left-container .bet-input-group>input, .stra-left-container .bet-input-group>span {
+        font-size: 0.8rem;
+    }
+
+    /* .stra-left-container .bet-input-group>span:first-child {
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 0.8rem;
+        padding: 0 0.2rem;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 1%;
+        white-space: nowrap;
+        vertical-align: middle;
+        height: 0.8rem;
+        display: table-cell;
+        position: static;
+        top: initial;
+    } */
+
+    .stra-left-container .bet-input-group.error>span:first-child {
+        background-color: #a94442;
+        color: white;
+    }
+
+    /** Button **/
+
+    .stra-left-container .bet-button-container {
+        padding: 0 0.1rem;
+        height: 100%;
+    }
+
+    .stra-left-container .bet-button {
+        top: inherit;
+        font-size: 1.2rem;
+        height: calc(100% - 10px - 0.3rem);
+}
+
+    .stra-left-container .btn-content .cashout-cont {
+        display: inline;
+        line-height: inherit;
+        padding-top: 0;
+    }
+
+    .stra-left-container .btn-content .cashout-amount-cont {
+        display: none;
+    }
+
+    .stra-left-container .bet-button.cashout {
+        font-size: 1rem;
+    }
+
+    .stra-left-container .bet-button.disable, .stra-left-container .bet-button.invalid-bet {
+        font-size: 1rem;
+    }
+
+    /* Login Button */
+
+    .stra-left-container .login-button-container {
+        margin: 0.4rem 0 0 0.5rem;
+    }
+}
+
+/** ================ Big screen and small controls look ================ **/
+
+@media screen and (min-width: 767px) {
+
+    .stra-left-container.small {
+        display: block;
+    }
+
+    .stra-left-container.small .control-inputs-container {
+        width: 70%;
+        float: left;
+        padding: 0;
+    }
+
+    .stra-left-container.small .input-control {
+        height: initial;
+    }
+
+    .stra-left-container.small .button-container {
+        float: left;
+        width: 30%;
+        height: 100%;
+    
+        padding: 0;
+}
+
+    .stra-left-container.small .bet-container {
+        padding: 0.5rem 0.1rem 0 0.3rem;
+    }
+
+    .stra-left-container.small .autocash-container {
+        padding: 1rem 0.1rem 0 0.3rem;
+    }
+
+    /** BET/AUTOCASH **/
+
+    .stra-left-container.small .bet-input-group>input, .stra-left-container .bet-input-group>span {
+        font-size: 0.8rem;
+    }
+
+    .stra-left-container.small .bet-input-group>input {
+        line-height: 2rem;
+        height: 2rem;
+    }
+
+    .stra-left-container .bet-input-group>span {
+        height: 1rem;
+    }
+
+    .stra-left-container.small .bet-input-group>span:first-child {
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 0.8rem;
+        padding: 0 0.3rem;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 1%;
+        white-space: nowrap;
+        vertical-align: middle;
+        display: table-cell;
+        position: static;
+        top: initial;
+        height: 2rem;
+    }
+
+    .stra-left-container.small .bet-input-group.error>span:first-child {
+        background-color: #a94442;
+        color: white;
+    }
+
+    /** Button **/
+
+    .stra-left-container.small .bet-button-container {
+        padding: 0;
+    }
+
+    .stra-left-container.small .bet-button {
+        font-size: 1.2rem;
+        margin: 0.5rem 0.5rem 0 0.5rem;
+        height: calc(100% - 10px - 0.9rem);
+        width: calc(100% - 1rem);
+    }
+
+    .stra-left-container.small .btn-content .cashout-cont {
+        display: inline;
+        line-height: inherit;
+        padding-top: 0;
+    }
+
+    .stra-left-container.small .btn-content .cashout-amount-cont {
+        display: none;
+    }
+
+    .stra-left-container.small .bet-button.cashout {
+        font-size: 1rem;
+    }
+
+    /* Login Button */
+
+    .stra-left-container.small .login-button-container {
+        margin: 0.4rem 0 0 0.5rem;
+    }
+}
+
+.radio-group {
+    margin-top: 1vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

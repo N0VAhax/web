@@ -1,0 +1,219 @@
+:root {
+    --coin-color: #4D88FF;
+}
+/* Container */
+
+#tabs-inner-container, #tabs-inner-container .log-chat-container {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+/* Tabs */
+
+#tabs-inner-container .tab-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: calc(100% - 1.5rem);
+    /* position: absolute;
+    left: 0;
+    right: calc(100% - 1.5rem);
+    top: 0;
+    bottom: 0; */
+}
+
+#tabs-inner-container .tab-container ul {
+    color: #32526E;
+    font-size: 0.8rem;
+    height: 1.5rem;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+}
+
+#tabs-inner-container .tab-container li {
+    margin: 0;
+    padding: 0;
+}
+/* 
+#tabs-inner-container .tab-container li.tab {
+    background: #ddd;
+} */
+
+
+/** 2 columns **/
+
+#tabs-inner-container .tab-container li.tab.col-2 {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px 1rem 0 0;
+    opacity: 0.5;
+}
+
+
+/** tab adjustments **/
+
+#tabs-inner-container .tab-container li.tab.col-2:nth-child(2) a {
+    padding-top: 0.5rem;
+}
+
+
+/** 3 columns **/
+
+#tabs-inner-container .tab-container li.tab.col-3 {
+    display: table-row;
+    /*width: 33.33%;*/
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+#tabs-inner-container .tab-container li.tab.col-3:first-child {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 66.66%;
+}
+
+#tabs-inner-container .tab-container li.tab.col-3:nth-child(2) {
+    position: absolute;
+    left: 33.33%;
+    bottom: 0;
+    top: 0;
+    right: 33.33%;
+}
+
+#tabs-inner-container .tab-container li.tab.col-3:nth-child(3) {
+    position: absolute;
+    left: 66.66%;
+    bottom: 0;
+    top: 0;
+    right: 0;
+}
+
+/** tab adjustments **/
+
+#tabs-inner-container .tab-container li.tab.col-3:nth-child(2) a {
+    padding-top: 0.5rem;
+}
+
+
+/** 4 columns **/
+
+#tabs-inner-container .tab-container li.tab.col-4 {
+    display: table-row;
+    /*width: 33.33%;*/
+    height: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+
+#tabs-inner-container .tab-container li.tab.col-4:first-child {
+    left: 0;
+    right: 75%;
+}
+
+#tabs-inner-container .tab-container li.tab.col-4:nth-child(2) {
+    left: 25%;
+    right: 50%;
+}
+
+#tabs-inner-container .tab-container li.tab.col-4:nth-child(3) {
+    left: 50%;
+    right: 25%;
+}
+
+#tabs-inner-container .tab-container li.tab.col-4:nth-child(4) {
+    left: 75%;
+    right: 0;
+}
+
+/** tab adjustments **/
+
+#tabs-inner-container .tab-container li.tab.col-4:nth-child(2) a {
+    padding-top: 0.5rem;
+}
+
+#tabs-inner-container .tab-container li.tab.col-4:nth-child(4) a {
+    padding-top: 0.4rem;
+}
+
+
+/** Tab content **/
+
+#tabs-inner-container .tab-container li.tab a {
+    vertical-align: middle;
+    width: 1.5rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    max-height: 1.5rem;
+    color: #FFF;
+    opacity: 0.5;
+}
+
+#tabs-inner-container .tab-container li.tab.tab-active {
+    border-bottom: solid var(--coin-color) 1px;
+    opacity: 1;
+}
+
+#tabs-inner-container .tab-container li.tab.tab-active a {
+    color: #FFF;
+}
+
+#tabs-inner-container .tab-container li.tab:hover a {
+    color: #FFF;
+}
+
+
+/** Settings tab **/
+
+#tabs-inner-container .tab-container .tab-settings {
+    position: absolute;
+    width: 1.5rem;
+    left: calc(100% - 1.5rem);
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: #ddd;
+}
+
+#tabs-inner-container .tab-container .tab-settings.tab-active {
+    background: white;
+}
+
+#tabs-inner-container .tab-container .tab-settings a {
+    vertical-align: initial;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+#tabs-inner-container .tab-container .tab-settings i {
+    /* line-width: 1.5rem; */
+
+}
+
+
+/* Widget */
+#tabs-inner-container .widget-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45px;
+    bottom: 0;
+}

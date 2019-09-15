@@ -1,0 +1,202 @@
+:root {
+    --coin-color: #4D88FF;
+}
+#top-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 72px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    /* font-family: Helvetica, sans-serif; */
+}
+
+#top-bar .logo-image {
+    width: 192px;
+    height: 40px;
+    margin-left: 24px;
+}
+
+#top-bar .account-image-container {
+    padding-top: 8px;
+    opacity: 0.5;
+}
+
+#top-bar .account-image {
+    background-image: url('../img/nav-item/icon/account.svg');
+    width: 24px;
+    height: 24px;
+}
+
+#top-bar .account-image:hover {
+    background-image: url('../img/nav-item/icon/account-sel.svg');
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#top-bar a {
+    font-size: 14px;
+}
+
+#top-bar .title {
+    float: left;
+}
+
+#top-bar .title h1 {
+    color: #FFF;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    font-family: "Courier New";
+}
+
+#top-bar .user-login {
+    float: right;
+    line-height: 40px;
+}
+
+
+/** Toggle design **/
+
+#top-bar .toggle-view {
+    line-height: 2rem;
+    float: right;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+@media handheld, only screen and (max-width: 767px) {
+    #top-bar .toggle-view {
+        margin-right: 0.5rem;
+    }
+}
+
+#top-bar .toggle-view a {
+    border: 2px solid grey;
+    padding: 2px;
+}
+@media handheld, only screen and (max-width: 767px) {
+    
+    #top-bar .toggle-view a {
+        display: none;
+    }
+
+    #top-bar .toggle-view:after {
+        content: '\00a0';
+        line-height: 2rem;
+        width: 1rem;
+        padding: 0 0.5rem;
+        height: 1rem;
+        border: 2px solid grey;
+        cursor: pointer;
+	}
+
+    #top-bar .toggle-view.white:after {
+        background-color: white;
+    }
+    
+    #top-bar .toggle-view.black:after {
+        background-color: black;
+    }
+}
+
+
+/** Full Screen **/
+
+#top-bar .full-screen {
+	float: right;
+    line-height: 2rem;
+    padding-right: 1rem;
+}
+
+#top-bar .full-screen i{
+    cursor: pointer;
+}
+
+
+/** User logged **/
+
+#top-bar .balance-bits {
+    padding: 10px 30px;
+    margin: -8px;
+    font-size: 1rem;
+    color: var(--coin-color);
+    border: solid rgba(255, 255, 255, 0.1) 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+#top-bar .currency-label {
+    font-size: 14px;
+    float: left;
+    line-height: 1.6rem;
+    margin-right: 10px;
+}
+
+#top-bar .currency-type, #top-bar .balance {
+    display: inline-block;
+    font-size: 21px;
+    float: left;
+    line-height: 1.7rem;
+}
+#top-bar .balance {
+    margin-right: 5px;
+    text-shadow: 0px 0px 8px var(--coin-color);
+}
+#top-bar .currency-type {
+    opacity: 0.5;
+}
+#top-bar .select-coin {
+    border: solid var(--coin-color) 1px;
+    border-width: 0 2px 2px 0;
+    opacity: 0.5;
+    display: inline-block;
+    padding: 3.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 10px 0 0 10px;
+}
+
+
+#top-bar .user-login .username {
+    display: inline-block;
+    padding-right: 2rem;
+}
+@media handheld, only screen and (max-width: 767px) {
+    #top-bar .user-login .username {
+        padding-right: 0.5rem;
+    }
+}
+
+#top-bar .user-login .username a {
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+
+/** Not logged user **/
+
+#top-bar .user-login .register {
+    display: inline-block;
+
+    padding-right: 1rem;
+}
+
+#top-bar .user-login .register a {
+
+}
+
+#top-bar .user-login .login {
+    display: inline-block;
+
+    padding-right: 2rem;
+}
+
+#top-bar .user-login .login a {
+    line-height: 2rem;
+
+}

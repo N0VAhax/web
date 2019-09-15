@@ -1,0 +1,321 @@
+.accountpage-container {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    left: 0;
+    /*bottom: 0;*/
+    overflow-y: auto;
+    display: table;
+    min-height: 100%;
+    width: 100%;
+}
+
+.accountpage-container .accountpage-sidebar {
+    /*display: table;*/
+    display: table-cell;
+    height: 100%;
+    width: 25%;
+    padding-top: 20px;
+    position: relative;
+    background-color: #242933;
+}
+
+.accountpage-container .accountpage-body{
+    /*display: table;*/
+    display: table-cell;
+    height: 100%;
+    width: 75%;
+    /*position: absolute;*/
+    left: 25%;
+    top: 0;
+}
+
+.accountpage-container .accountpage-inner-body {
+    padding-left: 162px;
+    /*width: 803px;*/
+}
+
+.accountpage-container .page-title {
+    font-size: 28px;
+    margin-top: 48px;
+    margin-bottom: 43px;
+}
+
+.accountpage-container .sidebar-element {
+    margin-left: 23px;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.accountpage-container .sidebar-element:hover {
+    color: rgba(77, 136, 255, 0.7);
+}
+
+.accountpage-container .sidebar-element .text {
+    font-size: 21px;
+    line-height: 24px;
+}
+
+.accountpage-container .image-container {
+    float: left;
+    margin-right: 21px;
+}
+
+.accountpage-container .image-container img{
+    width: 24px;
+    height: 24px;
+}
+
+.accountpage-container .balance-container {
+    margin-top: 31px;
+    padding: 10px 24px;
+    height: 56px;
+    font-size: 1rem;
+    color: var(--coin-color);
+    border: solid rgba(255, 255, 255, 0.1) 1px;
+    user-select: none;
+}
+
+.accountpage-container .balance-container .currency-label {
+    font-size: 14px;
+    float: left;
+    line-height: 1.6rem;
+    margin-right: 11px;
+    opacity: 0.5;
+}
+
+.accountpage-container .balance-container .balance {
+    display: inline-block;
+    font-size: 21px;
+    float: left;
+    line-height: 1.7rem;
+    margin-right: 3px;
+}
+
+.accountpage-container .balance-container .currency-type {
+    font-size: 21px;
+    line-height: 1.7rem;
+    opacity: 0.5;
+    float: left;
+}
+
+.accountpage-container .balance-container .select-coin {
+    border: solid var(--coin-color) 1px;
+    border-width: 0 2px 2px 0;
+    opacity: 0.5;
+    display: inline-block;
+    padding: 3.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 10px 0 0 10px;
+}
+
+.accountpage-container .deposit-address-label {
+    text-align: left;
+    font-size: 14px;
+    padding-top: 40px;
+    border-top: solid #15181f 1px;
+}
+
+.accountpage-container .deposit-address-label.security-label {
+    padding-top: 10px;
+    border-top: 0px;
+}
+
+.accountpage-container .deposit-address {
+    margin-top: 12px;
+}
+
+.accountpage-container .deposit-address input{
+    font-size: 21px;
+    padding: 14px;
+    width: calc(100% - 50px);
+    background-color: #14171f;
+    color: #fff;
+    border: none;
+}
+
+.accountpage-container .deposit-address.password-input input {
+    margin-bottom: 10px;
+}
+
+.accountpage-container .deposit-address .copy-deposit-addresss-btn {
+    float: right;
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+    border-radius: 3px;
+    background-color: #75e645;
+}
+
+.accountpage-container .deposit-address .copy-deposit-addresss-btn:hover {
+    cursor: pointer;
+}
+
+.accountpage-container .deposit-address .copy-deposit-addresss-btn img {
+    float: right;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #75e645;
+}
+
+.accountpage-container .balances {
+    margin-top: 41px;
+    height: 92px;
+    padding-bottom: 40px;
+    border-bottom: solid #15181f 1px;
+}
+
+.accountpage-container .balances .eth-balance {
+    width: 25%;
+    float: left;
+}
+
+.accountpage-container .balances .eth-balance {
+    width: 25%;
+    float: left;
+}
+
+.accountpage-container .balances .eth-balance .balance-label {
+    font-size: 14px;
+}
+
+.accountpage-container .balances .eth-balance .balance-value {
+    margin-top: 12px;
+    font-size: 21px;
+    text-shadow: 0 0 8px rgba(77, 136, 255, 0.7);
+    color: var(--coin-color);
+}
+
+.accountpage-container .refer-friend-container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.accountpage-container .refer-friend-container .refer-link {
+    margin-top: 16px;
+}
+
+.accountpage-container .refer-friend-container .refer-label {
+    font-size: 21px;
+}
+
+.accountpage-container .refer-friend-container .refer-link .refer-link-a {
+    color: var(--coin-color);
+    font-size: 21px;
+}
+
+.accountpage-container .profile-leaderboard-btn-container .profile-btn-container {
+    margin-right: 48px;
+    float: left;
+}
+
+.accountpage-container .profile-leaderboard-btn-container .leaderboard-btn-container {
+    float: left;
+}
+
+.accountpage-container .profile-leaderboard-btn-container .profile-btn-container button {
+    width: 295px;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFF;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.accountpage-container .profile-leaderboard-btn-container .leaderboard-btn-container button {
+    width: 295px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFF;
+    border-radius: 3px;
+    background-color: #75e645;
+    border: none;
+    text-transform: uppercase;
+}
+
+
+.profile-leaderboard-btn-container {
+    text-align: right;
+    padding-right: 50px;
+}
+
+.accountpage-container .profile-leaderboard-btn-container .leaderboard-btn-container.change-btn-container {
+    float: none;
+}
+
+.accountpage-container .profile-leaderboard-btn-container .leaderboard-btn-container.change-btn-container button {
+    width: 200px;
+}
+
+.security-label {
+    font-size: 16px;
+}
+
+.small {
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 1;
+    padding-right: 50px;
+}
+
+.with-border {
+    border-top: solid rgba(255, 255, 255, 0.1) 1px;
+    padding-top: 10px;
+    margin-right: 50px;
+}
+
+.column.medium-6 {
+    width: calc(50% - 25px);
+    float: left;
+    padding: 10px;
+}
+
+.column.medium-12 {
+    width: calc(100% - 50px);
+}
+
+.column label {
+    display: block;
+    line-height: 1.5;
+}
+
+.column label input {
+    font-size: 21px;
+    padding: 14px;
+    width: 100%;
+    background-color: #14171f;
+    color: #fff;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.column.medium-6.qr-container {
+    float: left;
+    background-color: white;
+}
+
+.column.medium-12 label span {
+    font-size: 16px;
+}
+
+.mfa-btn-container {
+    padding-right: 0;
+    margin-bottom: 20px;
+}
+
+.messageContent {
+    font-size: 21px;
+    padding: 14px;
+    width: calc(100% - 50px);
+    background-color: #14171f;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

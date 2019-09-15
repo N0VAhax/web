@@ -1,0 +1,323 @@
+:root {
+    --coin-color: #4D88FF;
+}
+.messages-container {
+    height: 100%;
+    position: relative;
+    z-index: 1004;
+    font-family: Verdana, Tahoma, "Courier New", Arial;
+}
+
+.messages-container .loading-container, .messages-container .spinner-pre-loader {
+    background-image: url('../img/loading-white.gif');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.messages-container .spinner-pre-loader {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.messages {
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    font-size: 0.7rem;
+    padding-left: 0.2rem;  /* Allow user to resize element */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    bottom: 72px;
+}
+
+/* Firefox scrollbar alternative */
+.messages {
+    scrollbar-width: thin;
+    scrollbar-color: #242933 rgba(255, 255, 255, 0.28);
+}
+
+.messages::-webkit-scrollbar {
+    background-color: #242933;
+}
+.messages::-webkit-scrollbar-track {
+    background-color: #242933;
+}
+.messages::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.28);
+ }
+
+.chat-input-container {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    right: 10px;
+}
+
+.send-message-btn {
+    float: right;
+    cursor: pointer;
+    background-color: #75E645;
+    border: solid rgba(76, 136, 255, 0.2) 1px;
+    -webkit-box-shadow:  0px 8px 12px rgba(117, 230, 69, .2);
+    -moz-box-shadow: 0px 8px 12px rgba(117, 230, 69, .2);
+    box-shadow: 0px 8px 12px rgba(117, 230, 69, 0.2);
+    padding: 3px 15px;
+}
+
+.chat-input {
+    width: calc(100% - 55px);
+    border: 4px solid #ADADAD;
+    margin: 0;
+    padding: 9px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #FFF;
+    background-color: #15181F;
+    border: solid 1px rgba(76, 136, 255, 0.2);
+}
+.chat-input::placeholder {
+    color: #DDD;
+}
+
+.time-stamp {
+    margin-right: 0.1rem;
+    font-size: 0.5rem;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    color: white;
+}
+
+.msg-chat-message {
+    color: black;
+    margin: 10px;
+    font-size: 14px;
+    z-index: 1006;
+    position: relative;
+}
+
+.msg-chat-message a {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Channel selector */
+#chat-channel-selector {
+    width: 55px;
+    float: right;
+    cursor: pointer;
+}
+
+#chat-channel-selector > img {
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#chat-channel-selector > i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#chat-channel-selector .flags-container {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    left: calc(100% - 5.5rem);
+    background-color: white;
+    z-index: 1;
+    border: solid grey 2px;
+ }
+
+/* Animations for the flags container */
+
+.flags-enter {
+    opacity: 0.01;
+}
+
+.flags-enter.flags-enter-active {
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+.flags-leave {
+    opacity: 1;
+}
+
+.flags-leave.flags-leave-active {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+}
+
+#chat-channel-selector .flags-container .flags-flag {
+    width: 30px;
+    margin-right: 3px;
+}
+
+.flags-row {
+    position: relative;
+    height: 60px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.channel-label {
+    padding: 8px 20px;
+    color: black;
+}
+
+.channel-img-container {
+    padding: 0;
+}
+
+.channel-span-container {
+    padding: 0;
+    position: absolute;
+    top: 7px;
+    left: 50px;
+}
+
+#chat-channel-selector .flags-popover {
+    position: fixed;
+    background-color: #FAFAA7;
+    color: black;
+    font-family: monospace;
+    line-height: 1rem;
+    font-size: 0.7rem;
+    padding: 0 0.2rem;
+}
+
+/* Links within the message */
+.msg-chat-message .msg-body a {
+    color: #008cba; /* Blue */
+    /* font-family: Helvetica, Arial, sans-serif; */
+}
+.msg-chat-message .msg-body a:hover {
+    text-decoration: underline;
+}
+.msg-chat-message .msg-header {
+    width: 85px;
+    float: left;
+}
+.msg-chat-message .msg-body {
+    display: inline-block;
+    background-color: #15181F;
+    padding: 8px;
+    border-radius: 2px;
+    position: relative;
+    max-width: calc(100% - 115px);
+}
+
+.top-gradient {
+    width: 411px;
+    height: 92px;
+    background-image: linear-gradient(to bottom, #242933, rgba(36, 41, 51, 0));
+    z-index: 10000;
+    position: absolute;
+    right: 0;
+}
+
+.top-gradient.non-active {
+    opacity: 0;
+    z-index: -1;
+}
+
+.top-gradient.active {
+    opacity: 1;
+}
+
+.bottom-gradient {
+    width: 100%;
+    height: 92px;
+    background-image: linear-gradient(to top, #242933, rgba(36, 41, 51, 0));
+    z-index: 10000;
+    position: absolute;
+    bottom: 0;
+    bottom: 72px;
+}
+
+.bottom-gradient.non-active {
+    opacity: 0;
+    z-index: -1;
+}
+
+.bottom-gradient.active {
+    opacity: 1;
+}
+
+.msg-chat-message .msg-body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 8px solid #15181F;
+    border-bottom: 8px solid transparent;
+    top: 11px;
+    margin-left: -8px;
+}
+
+.msg-chat-message.msg-admin-message a {
+    color: var(--coin-color);
+}
+
+.msg-chat-message.msg-bot .msg-body {
+    background-color: #242933 !important;
+}
+
+.msg-info-message {
+    line-height: 17px;
+}
+
+.msg-info-message span {
+    color: #1e5e1e;
+    font-size: 14px;
+}
+
+.msg-highlight-message {
+    background-color: rgba(0, 61, 255, 0.2);
+}
+
+.msg-mute-message {
+    line-height: 17px;
+}
+
+.msg-mute-message a{
+    color: #1e3e1e;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.msg-mute-message span {
+    color: #1e3e1e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Bots messages */
+.msg-chat-message.bot-greyed, .msg-chat-message.bot-greyed a {
+    color: grey;
+}
+
+.chat-date {
+    color: #FFF;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+}
+
+.current-date {
+    opacity: 0.5;
+}

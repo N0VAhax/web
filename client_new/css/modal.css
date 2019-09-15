@@ -1,0 +1,64 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+
+.modal.in {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal .modal-slide {
+  /* top: -100%; */
+  width: 100%;
+  height: 100%;
+  transform: translate(0, -20%);
+  transition: transform 0.3s ease-out;
+  position: absolute;
+  padding: 82px 82px;
+}
+
+.modal.in .modal-slide {
+  transform: translate(0);
+  /* top: 0; */
+}
+
+.modal-close {
+  background-image: url('../img/nav-item/icon/close.svg');
+  position: absolute;
+  top: 43px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+}
+
+.modal-close:hover {
+    background-image: url('../img/nav-item/icon/close.svg');
+    position: absolute;
+    top: 45px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+.modal h3 {
+    color: purple;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+  opacity: 0;
+}
